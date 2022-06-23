@@ -1,16 +1,20 @@
 import React from "react";
+import { quesdata } from "../api/quesdata";
 
 const Header1 = ({ head }) => {
   return (
     <>
-      <div className="text-red-500">{head}</div>
-    </>
-  );
-};
-export const Header2 = () => {
-  return (
-    <>
-      <div>Header2</div>
+      {quesdata.map((sameep) => {
+        const { id, question, opt1, opt2 } = sameep;
+        return (
+          <div key={id}>
+            <div className="text-red-500">{id}</div>
+            <div className="text-red-500">{question}</div>
+            <div className="text-red-500">{opt1}</div>
+            <div className="text-red-500">{opt2}</div>
+          </div>
+        );
+      })}
     </>
   );
 };

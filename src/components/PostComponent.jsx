@@ -5,8 +5,8 @@ const PostComponent = ({ api }) => {
   return (
     <div>
       <div className="bg-gray-300 w-[300px] mx-auto p-2 my-4">
-        <div className="mb-4">
-          <img src={imgUrl} alt="postImage" />
+        <div className="w-full p-2 mb-4">
+          <img className="object-contain w-full" src={imgUrl} alt="postImage" />
         </div>
         <div className="mb-2">{title}</div>
         <div className="mb-2 text-sm">{desc}</div>
